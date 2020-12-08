@@ -1,0 +1,5 @@
+---
+- hosts: 54.153.3.230 
+  become: yes
+  roles:
+  - apache

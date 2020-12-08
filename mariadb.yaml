@@ -1,0 +1,21 @@
+---
+- hosts: linux
+  become: yes
+  tasks:
+  - name: install mariadb server
+    yum:
+      name=mariadb-server
+      state=latest
+    tags:
+    - install
+    - all
+  - name: start maria db
+    service:
+      name=mariadb
+      state=started
+    tags:
+    - start
+    - all
+  - name: add user
+    user:
+      name=testuser

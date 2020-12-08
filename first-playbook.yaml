@@ -1,0 +1,12 @@
+---
+- hosts: all 
+  tasks:
+  - name: First program create file
+    file: 
+      path: /home/ansible/firstfile.txt
+      state: touch
+  - name: First program create directory 
+    file:
+      path: /home/ansible/firstfile
+      state: directory
+  
